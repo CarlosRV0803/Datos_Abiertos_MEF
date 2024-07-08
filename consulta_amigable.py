@@ -1,5 +1,7 @@
 '''
 Created on May 11
+
+@author: cramirez
 '''
 
 import requests
