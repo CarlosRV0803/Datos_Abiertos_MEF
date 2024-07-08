@@ -21,3 +21,13 @@ def query_api_consulta_amigable(sql_query):
         #En caso de error, mostramos el número del error
         print(f"Error: {response.status_code}")
         return None
+
+#Declaramos el id de la base de datos abiertos de interés
+id_api_2023 = "c28a4a61-8813-414c-ab72-44fd888292d4"
+
+#Generamos un query para extraer la información del Pliego -- Ministerio de Desarrollo e Inclusión Social
+sql_query = f"SELECT * FROM \"{id_api_2023}\" WHERE \"SECTOR\" = '40'" and \"PLIEGO\" = '040' 
+
+df_midis_2023 = query_api_consulta_amigable(sql_query)
+
+print(df_midis_2023.shape)
